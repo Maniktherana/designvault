@@ -2,10 +2,12 @@
 	import '../app.pcss';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Toaster } from '$lib/components/ui/sonner';
+	import Nav from '$lib/components/nav.svelte';
 </script>
 
 <ModeWatcher />
 <Toaster />
+<Nav />
 <slot />
 <div class="gradient-bg"></div>
 
