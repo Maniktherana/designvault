@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
+	import Logo from './logo.svelte';
 
 	let isScrolled = writable(false);
 
@@ -24,7 +25,7 @@
 <nav
 	class={`sticky left-0 right-0 top-0 z-50 ${isScrolledValue ? 'border-b border-b-accent' : ''}`}
 >
-	<p>Navbar</p>
+	<Logo pathClass="text-muted-foreground hover:text-white" classes="h-8 w-8" />
 </nav>
 
 <style>
