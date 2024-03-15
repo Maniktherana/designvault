@@ -3,13 +3,7 @@
 	import { writable } from 'svelte/store';
 	import Logo from './logo.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { fly } from 'svelte/transition';
-
-	let isHovered = false;
-
-	function toggleHover() {
-		isHovered = !isHovered;
-	}
+	import ModeToggle from './mode-toggle.svelte';
 
 	let isScrolled = writable(false);
 
@@ -36,8 +30,9 @@
 	<a href="/" class="spinner text-muted-foreground transition-colors hover:text-white">
 		<Logo classes="h-5 w-5" />
 	</a>
-	<div class="flex flex-row items-center justify-center">
-		<Button variant="default" size="sm">Sign in</Button>
+	<div class="flex flex-row items-center justify-center gap-5">
+		<ModeToggle />
+		<Button variant="default" size="ln">Sign in</Button>
 	</div>
 </nav>
 
