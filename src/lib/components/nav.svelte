@@ -4,6 +4,7 @@
 	import Logo from './logo.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ModeToggle from './mode-toggle.svelte';
+	import { IconMailFilled, IconBolt } from '@tabler/icons-svelte';
 
 	let isScrolled = writable(false);
 
@@ -30,9 +31,24 @@
 	<a href="/" class="spinner text-muted-foreground transition-colors hover:text-white">
 		<Logo classes="h-5 w-5" />
 	</a>
+
 	<div class="flex flex-row items-center justify-center gap-5">
-		<ModeToggle />
-		<Button variant="default" size="ln">Sign in</Button>
+		<div class="flex flex-row items-center justify-center gap-3">
+			<a href="/about">
+				<Button variant="ghost" size="sm" class="flex gap-1">
+					<IconBolt size="20" />
+					<span class="hidden md:block">About</span>
+				</Button>
+			</a>
+			<Button variant="ghost" size="sm" class="flex gap-1">
+				<IconMailFilled size="20" />
+				<span class="hidden md:block">Subscribe</span>
+			</Button>
+			<ModeToggle />
+		</div>
+		<div class="flex flex-row items-center justify-center gap-3">
+			<Button variant="default" size="ln">Sign in</Button>
+		</div>
 	</div>
 </nav>
 
