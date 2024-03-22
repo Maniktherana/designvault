@@ -36,13 +36,13 @@
 		<div class="flex flex-row items-center justify-center gap-3">
 			<a href="/about">
 				<Button variant="ghost" size="sm" class="flex gap-1">
-					<IconBolt size="20" stroke="1.5" />
-					<span class="hidden md:block">About</span>
+					<IconBolt class="hidden md:block" size="20" stroke="1.5" />
+					<span>About</span>
 				</Button>
 			</a>
 			<Button variant="ghost" size="sm" class="flex gap-1">
-				<IconMailFilled size="20" stroke="1.5" />
-				<span class="hidden md:block">Subscribe</span>
+				<IconMailFilled class="hidden md:block" size="20" stroke="1.5" />
+				<span>Subscribe</span>
 			</Button>
 			<ModeToggle />
 		</div>
