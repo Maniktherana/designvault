@@ -28,27 +28,29 @@
 <nav
 	class={`sticky left-0 right-0 top-0 z-50 flex flex-row items-center justify-between p-3 backdrop-blur-lg ${isScrolledValue ? 'border-b border-b-accent' : ''}`}
 >
-	<a href="/" class="spinner mr-6 text-muted-foreground transition-colors hover:text-white">
+	<a href="/" class="spinner mr-4 text-muted-foreground transition-colors hover:text-white md:mr-6">
 		<Logo classes="h-5 w-5" />
 	</a>
 
 	<div class="nav-width flex min-w-0 flex-1 items-center justify-between">
 		<div class="flex flex-row items-center justify-center gap-3">
-			<a href="/about">
-				<Button variant="ghost" size="sm" class="flex gap-1">
-					<IconBolt class="hidden md:block" size="20" stroke="1.5" />
-					<span>About</span>
-				</Button>
-			</a>
+			<Button href="/" variant="ghost" size="sm" class="hidden gap-1 md:flex">
+				<Logo classes="h-5 w-5" />
+				<span>Vault</span>
+			</Button>
+			<Button href="/about" variant="ghost" size="sm" class="flex gap-1">
+				<IconBolt size="20" stroke="1.5" />
+				<span class="hidden md:block">About</span>
+			</Button>
 			<Button variant="ghost" size="sm" class="flex gap-1">
-				<IconMailFilled class="hidden md:block" size="20" stroke="1.5" />
-				<span>Subscribe</span>
+				<IconMailFilled size="20" stroke="1.5" />
+				<span class="hidden md:block">Subscribe</span>
 			</Button>
 		</div>
 
 		<div class="flex flex-row items-center justify-center gap-3">
 			<ModeToggle />
-			<Button variant="default" size="ln">Sign in</Button>
+			<Button href="/login" variant="default" size="ln">Sign in</Button>
 		</div>
 	</div>
 </nav>
