@@ -21,7 +21,7 @@
 		class="max-width z-40 mx-auto flex flex-col items-center justify-center gap-5 px-5 pt-[3rem]"
 	>
 		<h1 class="text-center text-4xl text-foreground/80 md:text-6xl">
-			Secure Storage for the Best Designs on the Web
+			A Vault for the Best Designs on the Web
 		</h1>
 		<p class="mt-6 text-center font-mono text-muted-foreground">
 			Design vault curates the best designs on the web. New websites every day.
