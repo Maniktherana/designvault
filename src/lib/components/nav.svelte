@@ -26,9 +26,12 @@
 </script>
 
 <nav
-	class={`sticky left-0 right-0 top-0 z-50 flex flex-row items-center justify-between p-3 backdrop-blur-lg ${isScrolledValue ? 'border-b border-b-accent' : ''}`}
+	class={`sticky left-0 right-0 top-0 z-50 flex flex-row items-center justify-between bg-background/70 p-3 backdrop-blur-lg ${isScrolledValue ? 'border-b border-b-muted' : ''}`}
 >
-	<a href="/" class="spinner mr-4 text-muted-foreground transition-colors hover:text-white md:mr-6">
+	<a
+		href="/"
+		class="spinner mr-4 text-muted-foreground transition-colors dark:hover:text-white md:mr-6"
+	>
 		<Logo classes="h-5 w-5" />
 	</a>
 
@@ -49,7 +52,7 @@
 		</div>
 
 		<div class="flex flex-row items-center justify-center gap-3">
-			<ModeToggle />
+			<!-- <ModeToggle /> -->
 			<Button href="/login" variant="default" size="ln">Sign in</Button>
 		</div>
 	</div>

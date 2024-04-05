@@ -9,7 +9,8 @@
 <Toaster />
 <Nav />
 <slot />
-<div class="gradient-bg"></div>
+
+<!-- <div class="gradient-bg"></div> -->
 
 <style>
 	.gradient-bg {
