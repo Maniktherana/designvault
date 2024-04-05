@@ -6,7 +6,7 @@
 </script>
 
 <ModeWatcher />
-<Toaster />
+<Toaster position="top-center" />
 <Nav />
 <slot />
 

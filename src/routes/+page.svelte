@@ -2,6 +2,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { IconMailFilled } from '@tabler/icons-svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
+	import { toast } from 'svelte-sonner';
 	import Logo from '$lib/components/logo.svelte';
 
 	import type { PageData } from './$types.js';
