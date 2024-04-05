@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import Logo from './logo.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ModeToggle from './mode-toggle.svelte';
 	import { IconMailFilled, IconBolt } from '@tabler/icons-svelte';
-	import * as Sheet from '$lib/components/ui/sheet';
 
 	let isScrolled = writable(false);
 
@@ -46,35 +45,10 @@
 				<IconBolt size="20" stroke="1.5" />
 				<span class="hidden md:block">About</span>
 			</Button>
-
-			<Sheet.Root>
-				<Sheet.Trigger>
-					<Button variant="ghost" size="sm" class="flex gap-1">
-						<IconMailFilled size="20" stroke="1.5" />
-						<span class="hidden md:block">Subscribe</span>
-					</Button>
-				</Sheet.Trigger>
-				<Sheet.Content
-					side="bottom"
-					class="max-width mx-5 my-5 h-[20vh] rounded-xl border border-muted-foreground/30 bg-muted/30 text-center backdrop-blur-xl md:mx-auto"
-				>
-					<Sheet.Header>
-						<Sheet.Description>
-							<div class="flex w-full flex-col items-center justify-center gap-3">
-								<div class="flex w-full flex-row items-center justify-center gap-3">
-									<div
-										class="flex h-8 w-8 items-center justify-center rounded-full bg-muted-foreground/30"
-									>
-										<Logo classes="h-6 w-6 text-white" />
-									</div>
-									<p class="text-lg text-foreground">Subscribe to Design Vault</p>
-								</div>
-								<p class="text-sm text-muted-foreground">No Spam. New designs every month.</p>
-							</div>
-						</Sheet.Description>
-					</Sheet.Header>
-				</Sheet.Content>
-			</Sheet.Root>
+			<Button href="/subscribe" variant="ghost" size="sm" class="flex gap-1">
+				<IconMailFilled size="20" stroke="1.5" />
+				<span class="hidden md:block">Subscribe</span>
+			</Button>
 		</div>
 
 		<div class="flex flex-row items-center justify-center gap-3">

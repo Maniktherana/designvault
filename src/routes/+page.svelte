@@ -1,12 +1,16 @@
-<script>
+<script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { IconMailFilled } from '@tabler/icons-svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
 	import Logo from '$lib/components/logo.svelte';
+
+	import type { PageData } from './$types.js';
+	import EmailForm from './email-form.svelte';
+	export let data: PageData;
 </script>
 
 <div
-	class="dark:bg-grid-white/[0.1] bg-grid-black/[0.16] relative mx-auto flex h-[40vh] w-full items-center justify-center bg-background"
+	class="relative mx-auto flex h-[40vh] w-full items-center justify-center bg-background bg-grid-black/[0.16] dark:bg-grid-white/[0.1]"
 >
 	<div
 		class="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_bottom,transparent,black)]"
@@ -32,11 +36,11 @@
 			</Sheet.Trigger>
 			<Sheet.Content
 				side="bottom"
-				class="max-width mx-5 my-5 h-[20vh] rounded-xl border border-muted-foreground/30 bg-muted/30 text-center backdrop-blur-xl md:mx-auto"
+				class="max-width mx-5 my-5 h-[25vh] rounded-xl border border-muted-foreground/30 bg-muted/30 text-center backdrop-blur-xl md:mx-auto"
 			>
 				<Sheet.Header>
 					<Sheet.Description>
-						<div class="flex w-full flex-col items-center justify-center gap-3">
+						<div class="flex w-full flex-col items-center justify-center gap-5">
 							<div class="flex w-full flex-row items-center justify-center gap-3">
 								<div
 									class="flex h-8 w-8 items-center justify-center rounded-full bg-muted-foreground/30"
@@ -45,7 +49,7 @@
 								</div>
 								<p class="text-lg text-foreground">Subscribe to Design Vault</p>
 							</div>
-							<p class="text-sm text-muted-foreground">No Spam. Just great designs every month.</p>
+							<EmailForm data={data.form} />
 						</div>
 					</Sheet.Description>
 				</Sheet.Header>
