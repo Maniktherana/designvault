@@ -45,10 +45,10 @@
 				<IconBolt size="20" stroke="1.5" />
 				<span class="hidden md:block">About</span>
 			</Button>
-			<Button href="/subscribe" variant="ghost" size="sm" class="flex gap-1">
+			<!-- <Button href="/subscribe" variant="ghost" size="sm" class="flex gap-1">
 				<IconMailFilled size="20" stroke="1.5" />
 				<span class="hidden md:block">Subscribe</span>
-			</Button>
+			</Button> -->
 		</div>
 
 		<div class="flex flex-row items-center justify-center gap-3">
