@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AnimatedSpinner from '$lib/components/animated-spinner.svelte';
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
 	import { formSchema, type FormSchema } from './schema';
@@ -11,7 +12,7 @@
 		validators: zodClient(formSchema)
 	});
 
-	const { form: formData, enhance } = form;
+	const { form: formData, enhance, submitting, delayed } = form;
 </script>
 
 <form
@@ -23,8 +24,17 @@
 		<Form.Control let:attrs>
 			<Form.Label class="text-left">Email</Form.Label>
 			<div class="flex w-full flex-row items-center justify-center gap-3">
-				<Input {...attrs} bind:value={$formData.email} class="w-full" />
-				<Form.Button class="max-wdith">Submit</Form.Button>
+				<Input
+					{...attrs}
+					bind:value={$formData.email}
+					class="w-full focus-visible:ring-1 focus-visible:ring-muted-foreground"
+				/>
+				<Form.Button class="w-[200px]">
+					{#if $submitting || $delayed}
+						<AnimatedSpinner className="w-6 h-6 mr-4" />
+					{/if}
+					Submit
+				</Form.Button>
 			</div>
 			<Form.FieldErrors />
 		</Form.Control>
