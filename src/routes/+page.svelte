@@ -9,7 +9,7 @@
 	export let data: PageData;
 </script>
 
-<div
+<section
 	class="relative mx-auto flex h-[40vh] w-full items-center justify-center bg-background bg-grid-black/[0.16] dark:bg-grid-white/[0.1]"
 >
 	<div
@@ -56,7 +56,7 @@
 			</Sheet.Content>
 		</Sheet.Root>
 	</div>
-</div>
+</section>
 <div
 	class="z-10 mx-auto h-[2px] max-w-screen-2xl bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"
 ></div>
