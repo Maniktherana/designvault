@@ -6,7 +6,8 @@ export const userTable = sqliteTable('user', {
 	name: text('name').notNull(),
 	isEmailVerified: integer('is_email_verified', { mode: 'boolean' }).default(false),
 	avatarUrl: text('avatar_url'),
-	likedPosts: text('liked_posts')
+	likedPosts: text('liked_posts'),
+	admin: integer('admin', { mode: 'boolean' }).default(false)
 });
 
 export const postTable = sqliteTable(

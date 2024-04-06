@@ -15,6 +15,13 @@
       "when": 1712336821708,
       "tag": "0001_tough_clint_barton",
       "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1712405997668,
+      "tag": "0002_soft_mercury",
+      "breakpoints": false
     }
   ]
 }
