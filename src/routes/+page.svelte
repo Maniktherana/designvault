@@ -29,7 +29,7 @@
 
 		<Sheet.Root>
 			<Sheet.Trigger>
-				<Button variant="default" size="default" class="flex gap-3 bg-transparent">
+				<Button variant="default" size="default" class="flex gap-3 rounded-lg bg-transparent">
 					<IconMailFilled size="24" stroke="1.5" />
 					<span class="text-lg">Subscribe</span>
 				</Button>
