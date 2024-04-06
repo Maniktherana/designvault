@@ -24,6 +24,7 @@
 		<div class="flex flex-col items-center justify-start gap-3 md:items-start">
 			<h1 class="font-mono text-2xl">
 				Hi, {loggedInUser.name || loggedInUser.email}
+				{loggedInUser.admin && '(Admin)'}
 			</h1>
 			<div class="flex flex-row items-center justify-start gap-3">
 				<form method="POST" action={route('logout /account')}>
