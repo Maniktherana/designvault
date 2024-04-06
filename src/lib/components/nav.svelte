@@ -6,6 +6,8 @@
 	import ModeToggle from './mode-toggle.svelte';
 	import { IconMailFilled, IconBolt } from '@tabler/icons-svelte';
 
+	export let isUserLoggedIn = false;
+
 	let isScrolled = writable(false);
 
 	onMount(() => {
@@ -53,7 +55,11 @@
 
 		<div class="flex flex-row items-center justify-center gap-3">
 			<!-- <ModeToggle /> -->
-			<Button href="/login" variant="default" size="ln">Sign in</Button>
+			{#if isUserLoggedIn}
+				<Button href="/account" variant="default" size="ln">Account</Button>
+			{:else}
+				<Button href="/login" variant="default" size="ln">Sign in</Button>
+			{/if}
 		</div>
 	</div>
 </nav>

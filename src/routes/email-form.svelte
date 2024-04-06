@@ -29,7 +29,12 @@
 					bind:value={$formData.email}
 					class="w-full rounded-lg focus-visible:ring-1 focus-visible:ring-muted-foreground"
 				/>
-				<Form.Button variant="default" class="w-[200px] rounded-lg">
+				<Form.Button
+					variant="default"
+					disabled={$submitting || $delayed}
+					aria-disabled={$submitting || $delayed}
+					class="w-[200px] rounded-lg disabled:pointer-events-none disabled:opacity-50"
+				>
 					{#if $submitting || $delayed}
 						<AnimatedSpinner className="w-6 h-6 mr-4" />
 					{/if}

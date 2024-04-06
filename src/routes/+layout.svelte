@@ -1,29 +1,36 @@
-<script>
-	import '../app.pcss';
+<script lang="ts">
+	import extend from 'just-extend';
+	import { toast } from 'svelte-sonner';
 	import { ModeWatcher } from 'mode-watcher';
-	import { Toaster } from '$lib/components/ui/sonner';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { getFlash } from 'sveltekit-flash-message';
+	import { setupViewTransition } from 'sveltekit-view-transition';
+
 	import Nav from '$lib/components/nav.svelte';
+	import { Toaster } from '$lib/components/ui/sonner';
+
+	import '../app.pcss';
+
+	import { page } from '$app/stores';
+
+	export let data;
+
+	const flash = getFlash(page);
+
+	$: if ($flash) {
+		toast.info($flash.message);
+	}
+
+	setupViewTransition();
+
+	$: metaTags = extend(true, {}, data.baseMetaTags, $page.data.pageMetaTags);
+	$: isUserLoggedIn = data.isUserLoggedIn;
 </script>
 
+<MetaTags {...metaTags} />
 <ModeWatcher />
-<Toaster position="top-center" />
-<Nav />
+<Toaster richColors closeButton position="top-center" />
+<Nav {isUserLoggedIn} />
 <slot />
 
 <!-- <div class="gradient-bg"></div> -->
-
-<style>
-	.gradient-bg {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 20vh;
-		pointer-events: none;
-		background: linear-gradient(
-			rgba(18, 134, 251, 0.2) 0%,
-			rgba(21, 237, 212, 0.1) 50%,
-			rgba(21, 154, 237, 0) 100%
-		);
-	}
-</style>
