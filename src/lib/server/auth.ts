@@ -1,5 +1,5 @@
 import { dev } from '$app/environment';
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '$env/static/private';
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, BASE_URL } from '$env/static/private';
 
 import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle';
 import { Google } from 'arctic';
@@ -10,7 +10,7 @@ import { db } from './db';
 
 const dbAdapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);
 
-const googleRedirectUrl = `http://localhost:5173/login/google/callback`;
+const googleRedirectUrl = `${BASE_URL}/login/google/callback`;
 
 export const googleOauth = new Google(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, googleRedirectUrl);
 
