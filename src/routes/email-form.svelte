@@ -41,7 +41,7 @@
 					Submit
 				</Form.Button>
 			</div>
-			<Form.FieldErrors />
+			<Form.FieldErrors class="text-left" />
 		</Form.Control>
 		<Form.Description class="text-left text-xs text-muted-foreground"
 			>No Spam. Just great designs every month.</Form.Description
