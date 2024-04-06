@@ -52,8 +52,8 @@
 	<div
 		class="mx-auto my-8 h-[2px] max-w-screen-2xl bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"
 	></div>
-
-	<section class="mt-4 max-w-md">
-		<h2 class="text-left font-mono text-xl font-light">Saved desings</h2>
-	</section>
 </div>
+
+<section class="max-width mx-auto mt-4 px-5">
+	<h2 class="text-left font-mono text-xl font-light">Saved desings</h2>
+</section>
