@@ -12,7 +12,8 @@ const PAGES = {
   "/": `/`,
   "/about": `/about`,
   "/account": `/account`,
-  "/login": `/login`
+  "/login": `/login`,
+  "/subscribe": `/subscribe`
 }
 
 /**
@@ -29,7 +30,8 @@ const SERVERS = {
 const ACTIONS = {
   "default /": `/`,
   "logout /account": `/account?/logout`,
-  "deleteUser /account": `/account?/deleteUser`
+  "deleteUser /account": `/account?/deleteUser`,
+  "default /subscribe": `/subscribe`
 }
 
 /**
@@ -139,9 +141,9 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = {
-  PAGES: { '/': never, '/about': never, '/account': never, '/login': never }
+  PAGES: { '/': never, '/about': never, '/account': never, '/login': never, '/subscribe': never }
   SERVERS: { 'GET /login/google': never, 'GET /login/google/callback': never }
-  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteUser /account': never }
+  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteUser /account': never, 'default /subscribe': never }
   LINKS: Record<string, never>
   Params: Record<string, never>
 }
