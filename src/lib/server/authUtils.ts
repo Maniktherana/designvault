@@ -64,6 +64,6 @@ export const getAllUsers = async () => {
 	return queryResult;
 };
 
-export const deleteAllUsers = async () => {
-	return await db.delete(userTable);
+export const deleteUser = async (userId: string) => {
+	await db.delete(userTable).where(eq(userTable.id, userId));
 };

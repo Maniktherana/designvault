@@ -3,12 +3,14 @@ import type { Actions, PageServerLoad } from './$types';
 import { redirect } from 'sveltekit-flash-message/server';
 
 import { route } from '$lib/ROUTES';
-import { deleteSessionCookie, deleteAllUsers, getAllUsers } from '$lib/server/authUtils';
+import { deleteSessionCookie, getAllUsers, deleteUser } from '$lib/server/authUtils';
 import { lucia } from '$lib/server/auth';
 import { LOGIN_ROUTE } from '$lib/utils/navLinks';
 
-export const load = (async ({ locals: { user }, cookies }) => {
-	if (!user) {
+export const load = (async (event) => {
+	const { cookies, locals } = event;
+
+	if (!locals.user) {
 		throw redirect(
 			route('/login'),
 			{
@@ -20,14 +22,13 @@ export const load = (async ({ locals: { user }, cookies }) => {
 	}
 
 	return {
-		loggedInUserName: user.name,
+		loggedInUser: locals.user,
 		allUsers: await getAllUsers()
 	};
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {
 	logout: async ({ cookies, locals }) => {
-		console.log('triggereed this');
 		if (!locals.session?.id) return;
 
 		await lucia.invalidateSession(locals.session.id);
@@ -37,17 +38,13 @@ export const actions: Actions = {
 		throw redirect(303, LOGIN_ROUTE);
 	},
 
-	deleteAllUsers: async ({ cookies }) => {
-		const allUsers = await getAllUsers();
-
-		for (const user of allUsers) {
-			await lucia.invalidateUserSessions(user.id);
+	deleteUser: async ({ cookies, locals }) => {
+		if (!locals.session?.id) return;
+		if (locals.user?.id) {
+			await lucia.invalidateUserSessions(locals.user.id);
+			await deleteSessionCookie(lucia, cookies);
+			await deleteUser(locals.user.id);
 		}
-
-		await deleteSessionCookie(lucia, cookies);
-
-		await deleteAllUsers();
-
 		throw redirect(303, route('/login'));
 	}
 };

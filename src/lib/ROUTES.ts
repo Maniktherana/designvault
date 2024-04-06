@@ -28,7 +28,7 @@ const SERVERS = {
 const ACTIONS = {
   "default /": `/`,
   "logout /account": `/account?/logout`,
-  "deleteAllUsers /account": `/account?/deleteAllUsers`
+  "deleteUser /account": `/account?/deleteUser`
 }
 
 /**
@@ -140,7 +140,7 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 export type KIT_ROUTES = {
   PAGES: { '/': never, '/account': never, '/login': never }
   SERVERS: { 'GET /login/google': never, 'GET /login/google/callback': never }
-  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteAllUsers /account': never }
+  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteUser /account': never }
   LINKS: Record<string, never>
   Params: Record<string, never>
 }
