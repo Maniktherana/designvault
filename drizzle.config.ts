@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import type { Config } from 'drizzle-kit';
-import dotenv from 'dotenv';
-dotenv.config();
+import { DATABASE_URL, DATABASE_AUTH_TOKEN } from '$env/static/private';
 
 export default {
 	schema: 'src/lib/server/schema.ts',
@@ -11,7 +10,7 @@ export default {
 	strict: false,
 	verbose: true,
 	dbCredentials: {
-		url: process.env.DATABASE_URL!,
-		authToken: process.env.DATABASE_AUTH_TOKEN!
+		url: DATABASE_URL,
+		authToken: DATABASE_AUTH_TOKEN
 	}
 } satisfies Config;

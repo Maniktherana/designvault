@@ -24,7 +24,6 @@
 		"bits-ui": "^0.19.6",
 		"clsx": "^2.1.0",
 		"cmdk-sv": "^0.0.15",
-		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.30.1",
 		"formsnap": "^1.0.0",
 		"just-extend": "^6.2.0",
