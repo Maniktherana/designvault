@@ -62,20 +62,3 @@
 ></div>
 
 <div class="z-10 h-screen"></div>
-
-<style>
-	.shine-sm {
-		background-image: radial-gradient(
-			200px 200px at 50% 100%,
-			#2d2f337b 20%,
-			rgba(40, 41, 45, 0) 100%
-		);
-	}
-	.shine-lg {
-		background-image: radial-gradient(
-			500px 200px at 50% 100%,
-			#2d2f337b 20%,
-			rgba(40, 41, 45, 0) 100%
-		);
-	}
-</style>

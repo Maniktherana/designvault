@@ -10,7 +10,7 @@ import { db } from './db';
 
 const dbAdapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);
 
-const googleRedirectUrl = `http://localhost:5173/auth/oauth/google/callback`;
+const googleRedirectUrl = `http://localhost:5173/login/google/callback`;
 
 export const googleOauth = new Google(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, googleRedirectUrl);
 

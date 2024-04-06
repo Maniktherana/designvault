@@ -27,9 +27,9 @@
 				<Input
 					{...attrs}
 					bind:value={$formData.email}
-					class="w-full focus-visible:ring-1 focus-visible:ring-muted-foreground"
+					class="w-full rounded-lg focus-visible:ring-1 focus-visible:ring-muted-foreground"
 				/>
-				<Form.Button class="w-[200px]">
+				<Form.Button variant="default" class="w-[200px] rounded-lg">
 					{#if $submitting || $delayed}
 						<AnimatedSpinner className="w-6 h-6 mr-4" />
 					{/if}
