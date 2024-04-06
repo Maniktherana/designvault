@@ -20,7 +20,12 @@
 			</div>
 			<p class="text-lg text-foreground">Sign in to Design Vault</p>
 		</div>
-		<Button variant="default" size="lg" class="gap-3 rounded-lg" href={route('GET /login/google')}>
+		<Button
+			variant="default"
+			size="lg"
+			class="gap-3 rounded-lg font-mono"
+			href={route('GET /login/google')}
+		>
 			<IconBrandGoogle size="20" stroke="1.5" />
 			<span>Sign in with Google</span>
 		</Button>

@@ -22,9 +22,9 @@
 			</Avatar.Fallback>
 		</Avatar.Root>
 		<div class="flex flex-col items-center justify-start gap-3 md:items-start">
-			<h1 class="font-mono text-2xl">
-				Hi, {loggedInUser.name || loggedInUser.email}
-				{loggedInUser.admin && '(Admin)'}
+			<h1 class="text-xl">
+				Hi, <span class="text-3xl">{loggedInUser.name || loggedInUser.email}</span>
+				{loggedInUser.admin && '(admin)'}
 			</h1>
 			<div class="flex flex-row items-center justify-start gap-3">
 				<form method="POST" action={route('logout /account')}>
@@ -56,5 +56,5 @@
 </div>
 
 <section class="max-width mx-auto mt-4 px-5">
-	<h2 class="text-left font-mono text-xl font-light">Saved desings</h2>
+	<h2 class="text-left text-2xl font-light">Saved desings</h2>
 </section>
