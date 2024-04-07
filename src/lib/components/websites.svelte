@@ -25,7 +25,7 @@
 					<Button variant="ghost" size="icon">
 						<IconBookmark size="20" stroke="1.5" />
 					</Button>
-					<Button variant="ghost" size="icon">
+					<Button href={post.websiteUrl} target="_blank" variant="ghost" size="icon">
 						<IconArrowUpRight size="20" stroke="1.5" />
 					</Button>
 				</div>
