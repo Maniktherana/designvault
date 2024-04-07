@@ -10,7 +10,7 @@
 	{#each posts as post}
 		<div class="flex flex-col items-center justify-center gap-1">
 			<a href={post.websiteUrl} target="_blank">
-				<img src={post.imageUrl} alt={post.name} class="h-auto w-full lg:w-[400px]" />
+				<img src={post.imageUrl} alt={post.name} class="h-auto min-h-[250px] w-full lg:w-[400px]" />
 			</a>
 			<div class="flex w-full flex-row items-center justify-between gap-3 font-mono">
 				<div class="flex flex-row gap-3 text-foreground">
