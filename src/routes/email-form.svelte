@@ -44,7 +44,7 @@
 			<Form.FieldErrors class="text-left" />
 		</Form.Control>
 		<Form.Description class="text-left text-xs text-muted-foreground"
-			>No Spam. Just great designs every month.</Form.Description
+			>No Spam. Just 5 great designs once a month.</Form.Description
 		>
 	</Form.Field>
 </form>
