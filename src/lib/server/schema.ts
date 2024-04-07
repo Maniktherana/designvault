@@ -18,6 +18,7 @@ export const postTable = sqliteTable(
 		imageUrl: text('image_url').notNull(),
 		videoUrl: text('video_url').notNull(),
 		mainTag: text('main_tag').notNull(),
+		likes: integer('likes').default(0).notNull(),
 		createdAt: integer('created_at').notNull()
 	},
 	(table) => {
@@ -37,7 +38,7 @@ export const tagsTable = sqliteTable(
 	(table) => {
 		return {
 			idIdx: index('tags_id_idx').on(table.id),
-			nameIdx: uniqueIndex('tags_email_idx').on(table.name)
+			nameIdx: uniqueIndex('tags_name_idx').on(table.name)
 		};
 	}
 );
