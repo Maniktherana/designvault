@@ -4,13 +4,15 @@ import { superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { formSchema } from './schema';
 import { db } from '$lib/server/db';
-import { newsletterTable } from '$lib/server/schema.js';
-import { eq } from 'drizzle-orm';
+import { newsletterTable, postTable } from '$lib/server/schema.js';
+import { eq, desc } from 'drizzle-orm';
 
 export const load: PageServerLoad = async () => {
 	const form = await superValidate(zod(formSchema));
+	const posts = await db.select().from(postTable).orderBy(desc(postTable.createdAt)).all();
 	return {
-		form: form
+		form: form,
+		posts: posts
 	};
 };
 

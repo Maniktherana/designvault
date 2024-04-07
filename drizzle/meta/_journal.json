@@ -22,6 +22,34 @@
       "when": 1712405997668,
       "tag": "0002_soft_mercury",
       "breakpoints": false
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1712498981292,
+      "tag": "0003_first_nighthawk",
+      "breakpoints": false
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1712499350455,
+      "tag": "0004_soft_selene",
+      "breakpoints": false
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1712499416935,
+      "tag": "0005_slim_nova",
+      "breakpoints": false
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1712499508383,
+      "tag": "0006_foamy_natasha_romanoff",
+      "breakpoints": false
     }
   ]
 }

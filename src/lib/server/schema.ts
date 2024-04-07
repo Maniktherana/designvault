@@ -15,11 +15,12 @@ export const postTable = sqliteTable(
 	{
 		id: integer('id').notNull().primaryKey(),
 		name: text('name').notNull(),
+		websiteUrl: text('website_url').notNull(),
 		imageUrl: text('image_url').notNull(),
 		videoUrl: text('video_url').notNull(),
 		mainTag: text('main_tag').notNull(),
 		likes: integer('likes').default(0).notNull(),
-		createdAt: integer('created_at').notNull()
+		createdAt: integer('created_at').notNull().default(Date.now())
 	},
 	(table) => {
 		return {
@@ -89,3 +90,4 @@ export const newsletterTable = sqliteTable(
 );
 
 export type UserInsertSchema = typeof userTable.$inferInsert;
+export type PostSelectSchema = typeof postTable.$inferSelect;

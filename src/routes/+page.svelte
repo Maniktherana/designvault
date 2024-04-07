@@ -6,6 +6,7 @@
 
 	import type { PageData } from './$types.js';
 	import EmailForm from './email-form.svelte';
+	import Websites from '$lib/components/websites.svelte';
 	export let data: PageData;
 </script>
 
@@ -61,4 +62,6 @@
 	class="z-10 mx-auto h-[2px] max-w-screen-2xl bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"
 ></div>
 
-<div class="z-10 h-screen"></div>
+<div class="z-10">
+	<Websites posts={data.posts} />
+</div>
