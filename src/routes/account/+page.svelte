@@ -24,7 +24,7 @@
 		<div class="flex flex-col items-center justify-start gap-3 md:items-start">
 			<h1 class="text-xl">
 				Hi, <span class="text-3xl">{loggedInUser.name || loggedInUser.email}</span>
-				{loggedInUser.admin && '(admin)'}
+				{loggedInUser.admin ? '(admin)' : ''}
 			</h1>
 			<div class="flex flex-row items-center justify-start gap-3">
 				<form method="POST" action={route('logout /account')}>
