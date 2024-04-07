@@ -3,7 +3,7 @@
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 
 # Design Vault - Under Construction 🚧
-Design vault curates the best designs on the web. New websites every day. #### [Visit](https://designvault.site)
+Design vault curates the best designs on the web. New websites every day. [Visit](https://designvault.site)
 
 ![Design Vault Landing Page](https://assets.designvault.site/landing.png)
 
