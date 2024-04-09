@@ -1,8 +1,18 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
+	import '@selemondev/svelte-marquee/dist/style.css';
+	import { Marquee } from '@selemondev/svelte-marquee';
 	import { IconMailFilled } from '@tabler/icons-svelte';
-	import * as Sheet from '$lib/components/ui/sheet';
+
+	import img1 from '$lib/assets/images/img1.png';
+	import img2 from '$lib/assets/images/img2.png';
+	import img3 from '$lib/assets/images/img3.png';
+	import img4 from '$lib/assets/images/img4.png';
+	import img5 from '$lib/assets/images/img5.png';
+	import img6 from '$lib/assets/images/img6.png';
+
 	import Logo from '$lib/components/logo.svelte';
+	import * as Sheet from '$lib/components/ui/sheet';
+	import { Button } from '$lib/components/ui/button';
 
 	import type { PageData } from './$types.js';
 	import EmailForm from './email-form.svelte';
@@ -37,19 +47,31 @@
 			</Sheet.Trigger>
 			<Sheet.Content
 				side="bottom"
-				class="max-width mx-5 my-5 h-[25vh] rounded-xl border border-muted-foreground/30 bg-muted/30 text-center backdrop-blur-xl md:mx-auto"
+				class="mx-5 my-5 min-h-[25vh] max-w-screen-sm rounded-xl border border-muted-foreground/30 bg-background/70 text-center backdrop-blur-lg md:mx-auto"
 			>
 				<Sheet.Header>
 					<Sheet.Description>
 						<div class="flex w-full flex-col items-center justify-center gap-5">
+							<Marquee direction="left" fade={true} reverse={false}>
+								<img src={img1} alt="img1" class="h-32" />
+								<img src={img2} alt="img2" class="h-32" />
+								<img src={img3} alt="img3" class="h-32" />
+								<img src={img4} alt="img4" class="h-32" />
+								<img src={img5} alt="img5" class="h-32" />
+								<img src={img6} alt="img6" class="h-32" />
+							</Marquee>
+
 							<div class="flex w-full flex-row items-center justify-center gap-3">
 								<div
 									class="flex h-8 w-8 items-center justify-center rounded-full bg-muted-foreground/30"
 								>
 									<Logo classes="h-6 w-6 text-white" />
 								</div>
-								<p class="text-lg text-foreground">Subscribe to Design Vault</p>
+								<p class="text-2xl text-foreground">Subscribe to Design Vault</p>
 							</div>
+
+							<p class="font-mono">Get top pics once a month on the first of every month.</p>
+
 							<EmailForm data={data.form} />
 						</div>
 					</Sheet.Description>

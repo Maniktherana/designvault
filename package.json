@@ -18,6 +18,7 @@
 	"dependencies": {
 		"@libsql/client": "^0.5.6",
 		"@lucia-auth/adapter-drizzle": "^1.0.4",
+		"@selemondev/svelte-marquee": "^0.0.2",
 		"@tabler/icons-svelte": "^3.1.0",
 		"arctic": "^1.5.0",
 		"better-sqlite3": "^9.4.3",
@@ -65,6 +66,7 @@
 		"prettier-plugin-tailwindcss": "^0.5.9",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
+		"svelte-preprocess-import-assets": "^1.1.0",
 		"tailwindcss": "^3.3.6",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",

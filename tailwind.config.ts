@@ -42,7 +42,7 @@ const config = {
 					foreground: 'hsl(var(--destructive-foreground) / <alpha-value>)'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
+					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground) / var(--muted-alpha))'
 				},
 				accent: {

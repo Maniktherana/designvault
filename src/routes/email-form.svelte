@@ -1,10 +1,12 @@
 <script lang="ts">
-	import AnimatedSpinner from '$lib/components/animated-spinner.svelte';
+	import { zodClient } from 'sveltekit-superforms/adapters';
+	import { type SuperValidated, type Infer, superForm } from 'sveltekit-superforms';
+
 	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
+	import AnimatedSpinner from '$lib/components/animated-spinner.svelte';
+
 	import { formSchema, type FormSchema } from './schema';
-	import { type SuperValidated, type Infer, superForm } from 'sveltekit-superforms';
-	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	export let data: SuperValidated<Infer<FormSchema>>;
 
@@ -18,12 +20,12 @@
 <form
 	method="POST"
 	use:enhance
-	class="mt-5 flex w-full max-w-screen-lg flex-col items-center justify-center gap-2 font-mono"
+	class="flex w-full max-w-screen-sm flex-col items-center justify-center gap-2 font-mono"
 >
 	<Form.Field {form} name="email" class="flex w-full max-w-[500px] flex-col">
 		<Form.Control let:attrs>
 			<Form.Label class="text-left">Email</Form.Label>
-			<div class="flex w-full flex-row items-center justify-center gap-3">
+			<div class="flex w-full flex-col items-center justify-center gap-3">
 				<Input
 					{...attrs}
 					bind:value={$formData.email}
@@ -33,7 +35,7 @@
 					variant="default"
 					disabled={$submitting || $delayed}
 					aria-disabled={$submitting || $delayed}
-					class="w-[200px] rounded-lg disabled:pointer-events-none disabled:opacity-50"
+					class="w-full rounded-lg bg-muted-foreground text-black hover:bg-muted-foreground/70 disabled:pointer-events-none disabled:opacity-50"
 				>
 					{#if $submitting || $delayed}
 						<AnimatedSpinner className="w-6 h-6 mr-4" />
@@ -43,8 +45,8 @@
 			</div>
 			<Form.FieldErrors class="text-left" />
 		</Form.Control>
-		<Form.Description class="text-left text-xs text-muted-foreground"
-			>No Spam. Just 5 great designs once a month.</Form.Description
+		<Form.Description class="text-center text-xs text-muted-foreground"
+			>No Spam. Just great designs.</Form.Description
 		>
 	</Form.Field>
 </form>
