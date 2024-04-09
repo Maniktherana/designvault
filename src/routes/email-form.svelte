@@ -29,6 +29,7 @@
 				<Input
 					{...attrs}
 					bind:value={$formData.email}
+					autofocus={false}
 					class="w-full rounded-lg focus-visible:ring-1 focus-visible:ring-muted-foreground"
 				/>
 				<Form.Button

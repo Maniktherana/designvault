@@ -12,6 +12,8 @@
 	import EmailForm from '../email-form.svelte';
 
 	export let data: PageData;
+	const images = [img1, img2, img3, img4, img5, img6];
+	images.sort(() => Math.random() - 0.5);
 </script>
 
 <div
@@ -24,12 +26,11 @@
 		class="z-[999] m-5 mt-[-10rem] flex w-full max-w-screen-sm flex-col items-center justify-center gap-10 rounded-xl border border-muted-foreground/30 bg-background/30 px-5 py-10 text-center backdrop-blur-xl"
 	>
 		<Marquee direction="left" fade={true} reverse={false}>
-			<img src={img1} alt="img1" class="h-32" />
-			<img src={img2} alt="img2" class="h-32" />
-			<img src={img3} alt="img3" class="h-32" />
-			<img src={img4} alt="img4" class="h-32" />
-			<img src={img5} alt="img5" class="h-32" />
-			<img src={img6} alt="img6" class="h-32" />
+			<Marquee direction="left" fade={true} reverse={false}>
+				{#each images as image, idx}
+					<img src={image} alt={`${image}${idx}`} class="h-32" />
+				{/each}
+			</Marquee>
 		</Marquee>
 
 		<div class="flex w-full flex-row items-center justify-center gap-3">

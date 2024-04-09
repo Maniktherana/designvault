@@ -5,7 +5,7 @@
 	import img4 from '$lib/assets/images/img4.png';
 	import img5 from '$lib/assets/images/img5.png';
 	import img6 from '$lib/assets/images/img6.png';
-	
+
 	import { IconMailFilled } from '@tabler/icons-svelte';
 	import Logo from '$lib/components/logo.svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
@@ -16,6 +16,9 @@
 	import Websites from '$lib/components/websites.svelte';
 	import Marquee from '$lib/components/marquee.svelte';
 	export let data: PageData;
+
+	const images = [img1, img2, img3, img4, img5, img6];
+	images.sort(() => Math.random() - 0.5);
 </script>
 
 <section
@@ -51,12 +54,9 @@
 					<Sheet.Description>
 						<div class="flex w-full flex-col items-center justify-center gap-5">
 							<Marquee direction="left" fade={true} reverse={false}>
-								<img src={img1} alt="img1" class="h-32" />
-								<img src={img2} alt="img2" class="h-32" />
-								<img src={img3} alt="img3" class="h-32" />
-								<img src={img4} alt="img4" class="h-32" />
-								<img src={img5} alt="img5" class="h-32" />
-								<img src={img6} alt="img6" class="h-32" />
+								{#each images as image, idx}
+									<img src={image} alt={`${image}${idx}`} class="h-32" />
+								{/each}
 							</Marquee>
 
 							<div class="flex w-full flex-row items-center justify-center gap-3">
