@@ -62,6 +62,20 @@ const config = {
 					foreground: 'hsl(var(--button-foreground) / var(--button-foreground-alpha))'
 				}
 			},
+			keyframes: {
+				'marquee-left': {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+				},
+				'marquee-up': {
+					from: { transform: 'translateY(0)' },
+					to: { transform: 'translateY(calc(-100% - var(--gap)))' }
+				}
+			},
+			animation: {
+				'marquee-left': 'marquee-left var(--duration, 40s) linear infinite',
+				'marquee-up': 'marquee-up var(--duration, 40s) linear infinite'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
