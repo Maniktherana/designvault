@@ -68,7 +68,7 @@
 								<p class="text-2xl text-foreground">Subscribe to Design Vault</p>
 							</div>
 
-							<p class="font-mono">Get top pics once a month on the first of every month.</p>
+							<p class="font-mono">Get top picks once a month on the first of every month.</p>
 
 							<EmailForm data={data.form} />
 						</div>
