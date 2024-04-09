@@ -40,7 +40,7 @@
 		</div>
 
 		<p class="font-mono text-muted-foreground">
-			Get top pics once a month on the first of every month.
+			Get top picks once a month on the first of every month.
 		</p>
 
 		<EmailForm data={data.form} />
