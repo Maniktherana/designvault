@@ -1,15 +1,12 @@
 <script lang="ts">
-	import '@selemondev/svelte-marquee/dist/style.css';
-	import { Marquee } from '@selemondev/svelte-marquee';
-	import { IconMailFilled } from '@tabler/icons-svelte';
-
 	import img1 from '$lib/assets/images/img1.png';
 	import img2 from '$lib/assets/images/img2.png';
 	import img3 from '$lib/assets/images/img3.png';
 	import img4 from '$lib/assets/images/img4.png';
 	import img5 from '$lib/assets/images/img5.png';
 	import img6 from '$lib/assets/images/img6.png';
-
+	
+	import { IconMailFilled } from '@tabler/icons-svelte';
 	import Logo from '$lib/components/logo.svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
 	import { Button } from '$lib/components/ui/button';
@@ -17,6 +14,7 @@
 	import type { PageData } from './$types.js';
 	import EmailForm from './email-form.svelte';
 	import Websites from '$lib/components/websites.svelte';
+	import Marquee from '$lib/components/marquee.svelte';
 	export let data: PageData;
 </script>
 

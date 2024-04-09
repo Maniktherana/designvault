@@ -1,7 +1,4 @@
 <script lang="ts">
-	import '@selemondev/svelte-marquee/dist/style.css';
-	import { Marquee } from '@selemondev/svelte-marquee';
-
 	import img1 from '$lib/assets/images/img1.png';
 	import img2 from '$lib/assets/images/img2.png';
 	import img3 from '$lib/assets/images/img3.png';
@@ -9,6 +6,7 @@
 	import img5 from '$lib/assets/images/img5.png';
 	import img6 from '$lib/assets/images/img6.png';
 
+	import Marquee from '$lib/components/marquee.svelte';
 	import Logo from '$lib/components/logo.svelte';
 	import type { PageData } from '../$types';
 	import EmailForm from '../email-form.svelte';

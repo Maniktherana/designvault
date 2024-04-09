@@ -45,11 +45,11 @@
 			</Button>
 			<Button href="/about" variant="ghost" size="sm" class="flex gap-1">
 				<IconBolt size="20" stroke="1.5" />
-				<span class="hidden md:block">About</span>
+				<p class="hidden md:flex">About</p>
 			</Button>
 			<Button href="/subscribe" variant="ghost" size="sm" class="flex gap-1">
 				<IconMailFilled size="20" stroke="1.5" />
-				<span class="hidden md:block">Subscribe</span>
+				<p class="hidden md:flex">Subscribe</p>
 			</Button>
 		</div>
 

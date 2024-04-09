@@ -18,7 +18,6 @@
 	"dependencies": {
 		"@libsql/client": "^0.5.6",
 		"@lucia-auth/adapter-drizzle": "^1.0.4",
-		"@selemondev/svelte-marquee": "^0.0.2",
 		"@tabler/icons-svelte": "^3.1.0",
 		"arctic": "^1.5.0",
 		"better-sqlite3": "^9.4.3",

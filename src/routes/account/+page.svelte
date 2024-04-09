@@ -42,34 +42,42 @@
 	<hr class="my-4" />
 	<div class="flex flex-col items-center justify-center gap-3">
 		<Card.Root class="w-full max-w-screen-sm bg-background">
-			<Card.Content class="flex flex-row items-center justify-between p-5">
-				<div class="flex flex-col">
+			<Card.Content
+				class="flex flex-col items-center justify-start gap-5 p-5 md:flex-row md:justify-between"
+			>
+				<div class="flex w-full flex-col">
 					<h3 class="text-lg text-foreground">Newsletter</h3>
 					<p class="font-mono text-xs text-muted-foreground">Update email preferences</p>
 				</div>
 				<form method="POST" action={route('toggleSubscription /account')}>
-					<Form.Button variant="default">{isSubscribed ? 'Unsubscribe' : 'Subscribe'}</Form.Button>
+					<Form.Button variant="default" class="w-[250px]"
+						>{isSubscribed ? 'Unsubscribe' : 'Subscribe'}</Form.Button
+					>
 				</form>
 			</Card.Content>
 		</Card.Root>
 		<Card.Root class="w-full max-w-screen-sm bg-background">
-			<Card.Content class="flex flex-row items-center justify-between p-5">
-				<div class="flex flex-col">
+			<Card.Content
+				class="flex flex-col items-center justify-start gap-5 p-5 md:flex-row md:justify-between"
+			>
+				<div class="flex w-full flex-col">
 					<h3 class="text-lg text-foreground">Logout</h3>
 					<p class="font-mono text-xs text-muted-foreground">Logout from Design Vault</p>
 				</div>
 				<form method="POST" action={route('logout /account')}>
 					<Form.Button
 						variant="default"
-						class="text-destructive hover:bg-destructive hover:text-destructive-foreground"
+						class="w-[250px] text-destructive hover:bg-destructive hover:text-destructive-foreground"
 						>Logout</Form.Button
 					>
 				</form>
 			</Card.Content>
 		</Card.Root>
 		<Card.Root class="w-full max-w-screen-sm bg-background">
-			<Card.Content class="flex flex-row items-center justify-between gap-5 p-5">
-				<div class="flex flex-col">
+			<Card.Content
+				class="flex flex-col items-center justify-start gap-5 p-5 md:flex-row md:justify-between"
+			>
+				<div class="flex w-full flex-col">
 					<h3 class="text-lg text-foreground">Delete your account</h3>
 					<p class="font-mono text-xs text-muted-foreground">
 						Permanently delete all data associated with this account
@@ -78,7 +86,7 @@
 				<form method="POST" action={route('deleteUser /account')}>
 					<Form.Button
 						variant="default"
-						class="gap-3 text-destructive hover:bg-destructive hover:text-destructive-foreground"
+						class="w-[250px] gap-3 text-destructive hover:bg-destructive hover:text-destructive-foreground"
 					>
 						<IconAlertTriangle size="20" stroke="1.5" />
 						Delete Account</Form.Button
