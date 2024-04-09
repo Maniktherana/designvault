@@ -31,6 +31,7 @@ const ACTIONS = {
   "default /": `/`,
   "logout /account": `/account?/logout`,
   "deleteUser /account": `/account?/deleteUser`,
+  "toggleSubscription /account": `/account?/toggleSubscription`,
   "default /subscribe": `/subscribe`
 }
 
@@ -143,7 +144,7 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 export type KIT_ROUTES = {
   PAGES: { '/': never, '/about': never, '/account': never, '/login': never, '/subscribe': never }
   SERVERS: { 'GET /login/google': never, 'GET /login/google/callback': never }
-  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteUser /account': never, 'default /subscribe': never }
+  ACTIONS: { 'default /': never, 'logout /account': never, 'deleteUser /account': never, 'toggleSubscription /account': never, 'default /subscribe': never }
   LINKS: Record<string, never>
   Params: Record<string, never>
 }
