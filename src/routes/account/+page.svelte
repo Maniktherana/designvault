@@ -45,7 +45,7 @@
 			<Card.Content class="flex flex-row items-center justify-between p-5">
 				<div class="flex flex-col">
 					<h3 class="text-lg text-foreground">Newsletter</h3>
-					<p class="font-mono text-xs text-muted-foreground">Logout from Design Vault</p>
+					<p class="font-mono text-xs text-muted-foreground">Update email preferences</p>
 				</div>
 				<form method="POST" action={route('toggleSubscription /account')}>
 					<Form.Button variant="default">{isSubscribed ? 'Unsubscribe' : 'Subscribe'}</Form.Button>
