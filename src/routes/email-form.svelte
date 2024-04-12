@@ -30,7 +30,7 @@
 					{...attrs}
 					bind:value={$formData.email}
 					autofocus={false}
-					class="w-full rounded-lg focus-visible:ring-1 focus-visible:ring-muted-foreground"
+					class="w-full rounded-lg text-[16px] focus-visible:ring-1 focus-visible:ring-muted-foreground"
 				/>
 				<Form.Button
 					variant="default"

@@ -32,5 +32,18 @@
 <Toaster richColors closeButton position="top-center" />
 <Nav {isUserLoggedIn} />
 <slot />
+<div class="bottom"></div>
 
-<!-- <div class="gradient-bg"></div> -->
+<style>
+	.bottom {
+		height: 120px;
+		width: 100dvw;
+		background: linear-gradient(180deg, #00000000 0%, #131416 100%);
+		position: sticky;
+		overflow: hidden;
+		pointer-events: none;
+		user-select: none;
+		bottom: 0;
+		z-index: 10;
+	}
+</style>
