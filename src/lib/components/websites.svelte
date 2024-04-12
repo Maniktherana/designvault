@@ -21,7 +21,7 @@
 					</h2>
 					<p class="text-xs text-muted-foreground">{post.mainTag}</p>
 				</div>
-				<div class="flex flex-row">
+				<div class="flex flex-row gap-1">
 					<Button variant="ghost" size="icon">
 						<IconBookmark size="20" stroke="1.5" />
 					</Button>

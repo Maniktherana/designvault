@@ -125,3 +125,5 @@
 <div class="z-10">
 	<Websites posts={data.posts} />
 </div>
+
+<div class="bottom-gradient"></div>
