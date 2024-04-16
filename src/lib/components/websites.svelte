@@ -13,7 +13,7 @@
 				<img
 					src={post.imageUrl}
 					alt={post.name}
-					class="h-auto min-h-[150px] w-full rounded-md lg:w-[400px]"
+					class="aspect-[384/240] h-auto min-h-[150px] w-full rounded-md lg:w-[400px]"
 				/>
 			</a>
 			<div class="flex w-full flex-row items-center justify-between gap-3 font-mono">
