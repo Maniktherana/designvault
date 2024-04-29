@@ -41,7 +41,7 @@
 					{#if $submitting || $delayed}
 						<AnimatedSpinner className="w-6 h-6 mr-4" />
 					{/if}
-					Submit
+					Subscribe for free
 				</Form.Button>
 			</div>
 			<Form.FieldErrors class="text-left" />

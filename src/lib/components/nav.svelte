@@ -47,10 +47,6 @@
 				<IconBolt size="20" stroke="1.5" />
 				<p class="hidden md:flex">About</p>
 			</Button>
-			<Button href="/subscribe" variant="ghost" size="sm" class="flex gap-1">
-				<IconMailFilled size="20" stroke="1.5" />
-				<p class="hidden md:flex">Subscribe</p>
-			</Button>
 		</div>
 
 		<div class="flex flex-row items-center justify-center gap-3">

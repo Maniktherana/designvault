@@ -1,11 +1,4 @@
 <script lang="ts">
-	import img1 from '$lib/assets/images/img1.png';
-	import img2 from '$lib/assets/images/img2.png';
-	import img3 from '$lib/assets/images/img3.png';
-	import img4 from '$lib/assets/images/img4.png';
-	import img5 from '$lib/assets/images/img5.png';
-	import img6 from '$lib/assets/images/img6.png';
-
 	import { IconMailFilled } from '@tabler/icons-svelte';
 	import Logo from '$lib/components/logo.svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
@@ -18,7 +11,13 @@
 	import Marquee from '$lib/components/marquee.svelte';
 	export let data: PageData;
 
-	const images = [img1, img2, img3, img4, img5, img6];
+	const images = [
+		'davidanthonychenault.png',
+		'amie.png',
+		'phantom.png',
+		'wisedesign.png',
+		'vercelship.png'
+	];
 	images.sort(() => Math.random() - 0.5);
 </script>
 
@@ -49,14 +48,18 @@
 				</Sheet.Trigger>
 				<Sheet.Content
 					side="bottom"
-					class="mx-5 my-10 min-h-[25vh] max-w-screen-sm rounded-xl border border-muted-foreground/30 bg-background/70 text-center backdrop-blur-lg md:mx-auto"
+					class="mx-5 my-10 min-h-[25vh] max-w-[400px] rounded-2xl border border-muted-foreground/30 bg-background/70 text-center backdrop-blur-lg md:mx-auto"
 				>
 					<Sheet.Header>
 						<Sheet.Description>
 							<div class="flex w-full flex-col items-center justify-center gap-5">
 								<Marquee direction="left" fade={true} reverse={false}>
-									{#each images as image, idx}
-										<img src={image} alt={`${image}${idx}`} class="h-32" />
+									{#each images as image}
+										<img
+											src={`https://assets.designvault.site/${image}`}
+											alt={`${image}`}
+											class="h-32"
+										/>
 									{/each}
 								</Marquee>
 
@@ -69,7 +72,9 @@
 									<p class="text-2xl text-foreground">Subscribe to Design Vault</p>
 								</div>
 
-								<p class="font-mono">Get top picks once a month on the first of every month.</p>
+								<p class="text-center font-mono">
+									Get top picks. Once a month. First of every month.
+								</p>
 
 								<EmailForm data={data.form} />
 							</div>
@@ -87,14 +92,18 @@
 					</Button>
 				</Dialog.Trigger>
 				<Dialog.Content
-					class="mx-5 my-5 min-h-[25vh] max-w-screen-sm rounded-xl border border-muted-foreground/30 bg-background/70 text-center backdrop-blur-lg md:mx-auto"
+					class="mx-5 my-5 min-h-[25vh] max-w-[400px] rounded-2xl border border-muted-foreground/30 bg-background/70 text-center backdrop-blur-lg md:mx-auto"
 				>
 					<Dialog.Header>
 						<Dialog.Description>
 							<div class="flex w-full flex-col items-center justify-center gap-5">
 								<Marquee direction="left" fade={true} reverse={false}>
-									{#each images as image, idx}
-										<img src={image} alt={`${image}${idx}`} class="h-32" />
+									{#each images as image}
+										<img
+											src={`https://assets.designvault.site/${image}`}
+											alt={`${image}`}
+											class="h-32"
+										/>
 									{/each}
 								</Marquee>
 
@@ -107,7 +116,9 @@
 									<p class="text-2xl text-foreground">Subscribe to Design Vault</p>
 								</div>
 
-								<p class="font-mono">Get top picks once a month on the first of every month.</p>
+								<p class="text-center font-mono">
+									Get top picks. Once a month. First of every month.
+								</p>
 
 								<EmailForm data={data.form} />
 							</div>

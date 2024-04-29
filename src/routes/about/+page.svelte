@@ -4,7 +4,7 @@
 	<div
 		class="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_bottom,transparent,black)]"
 	></div>
-	<section class="max-width z-[999] mx-auto mt-28 w-full px-5">
+	<section class="z-[999] mx-auto mt-28 w-full max-w-screen-sm px-5">
 		<h1 class="font-mono text-3xl font-light">About</h1>
 
 		<div class="mt-10 flex flex-col items-start justify-start gap-2 font-mono">
