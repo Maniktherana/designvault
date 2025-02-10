@@ -8,6 +8,7 @@
     "dev": "turbo dev --parallel",
     "lint": "turbo lint",
     "format": "turbo format",
+    "typecheck": "turbo typecheck",
     "shadcn": "cd packages/ui && bun shadcn"
   },
   "devDependencies": {

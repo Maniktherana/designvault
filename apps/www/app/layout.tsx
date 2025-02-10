@@ -1,6 +1,3 @@
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
-
 import "@repo/ui/globals.css";
 import { Providers } from "@/components/providers";
 
@@ -11,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
