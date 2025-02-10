@@ -9,12 +9,13 @@ const config = {
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
     "../../packages/ui/src/components/**/*.{ts,tsx}",
+    "./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}", // remix
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        mono: ["var(--font-mono)", ...fontFamily.mono],
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        mono: ["var(--font-geist-mono)", ...fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border))",
