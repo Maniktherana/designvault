@@ -1,8 +1,6 @@
 {
   "extends": ["../../biome.json"],
   "files": {
-    "ignore": [
-      "build/**"
-    ]
+    "ignore": ["build/**"]
   }
 }
