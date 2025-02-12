@@ -3,18 +3,21 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "generate": "pnpm dlx @better-auth/cli@latest generate --output ../database/schemas/auth-schema.ts",
     "lint": "biome check .",
     "format": "biome check . --write",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@types/node": "^22.13.1",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "pg": "^8.13.2"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@repo/tsconfig": "workspace:*",
-    "@types/bun": "^1.2.2",
     "drizzle-kit": "^0.30.4",
     "typescript": "^5.7.3"
-  },
-  "dependencies": {
-    "drizzle-orm": "^0.39.3"
   }
 }
