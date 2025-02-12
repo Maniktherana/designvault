@@ -9,7 +9,7 @@
     "lint": "turbo lint",
     "format": "turbo format",
     "typecheck": "turbo typecheck",
-    "shadcn": "cd packages/ui && bun shadcn"
+    "shadcn": "cd packages/ui && pnpm shadcn"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -17,5 +17,5 @@
     "turbo": "^2.3.0",
     "typescript": "5.5.4"
   },
-  "packageManager": "bun@1.2.2"
+  "packageManager": "pnpm@10.2.1"
 }
