@@ -2,7 +2,15 @@
   "name": "@repo/auth",
   "version": "0.0.0",
   "private": true,
+  "exports": {
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
   "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
@@ -16,6 +24,7 @@
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@types/node": "22.13.1",
+    "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   }
 }

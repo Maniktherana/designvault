@@ -7,7 +7,7 @@ export default function Page() {
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl font-bold font-mono">1234Hello World</h1>
         <h1 className="text-2xl font-bold font-sans">1234Hello World</h1>
-        <Button size="sm" variant={"destructive"}>
+        <Button size="sm" variant={"outline"}>
           Button
         </Button>
         <p className={cn("text-xl font-semibold text-destructive")}>hi</p>

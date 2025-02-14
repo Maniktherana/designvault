@@ -1,7 +1,8 @@
 {
-  "extends": "@repo/tsconfig/react-library.json",
-
+  "extends": "@repo/tsconfig/react.json",
   "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "outDir": "./dist",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
     "module": "ESNext",

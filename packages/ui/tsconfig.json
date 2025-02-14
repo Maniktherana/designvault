@@ -1,13 +1,14 @@
 {
   "extends": "@repo/tsconfig/nextjs.json",
   "compilerOptions": {
-    //"outDir": "dist"
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "@repo/*": ["../*"],
       "@repo/ui/*": ["./*"]
     }
   },
-  "include": ["."],
+  "include": [".", "../database/tsup.config copy.ts"],
   "exclude": ["node_modules", "dist"]
 }
